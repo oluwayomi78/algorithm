@@ -17,8 +17,7 @@ function processTitles() {
         alert("Duplicate found");
     }
     else {
-        alert("you are welcome");
-        newTitles.innerHTML = "your book title is " + userInput
+        alert("no book title");
     }
 }
 
@@ -74,21 +73,23 @@ function categoriseTemperature() {
     else if (temperature1 < warm) {
         convertedTemperature.innerHTML = "warm";
     }
-    else if (temperature1 >= hot && temperature1 >= cold && temperature1>= warm && temperature1) {
+    else if (temperature1 >= hot && temperature1 >= cold && temperature1 >= warm && temperature1) {
         convertedTemperature.innerHTML = "hot";
     }
 }
 
-function checkAnswer() {
-    var studentAnswer = answer.value.trim().toLowerCase();
-    var correctAnswer = ["Ogbomoso", "Oyo", "Ibadan", "Lagos"]
-    if (studentAnswer == "") {
-        alert("Please enter your answer");
+function calculateLuggage() {
+    var weight1 = weight.value
+    var Underweight = 20;
+    var Allowed = 30;
+    var Overweight = 30;
+    if (weight1 < Underweight) {
+        luggageStatus.innerHTML = "Underweight";
     }
-    else if (correctAnswer.includes(studentAnswer)) {
-        alert("correct answer");
+    else if (weight1 < Allowed) {
+        luggageStatus.innerHTML = "Allowed";
     }
-    else {
-        alert("Wrong Answer");
+    else if (weight1 > Overweight) {
+        luggageStatus.innerHTML = "Overweight";
     }
 }
